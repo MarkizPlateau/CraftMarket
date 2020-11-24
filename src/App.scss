@@ -1,0 +1,25 @@
+@import "scss/_reset";
+@import "scss/_colors";
+@import "scss/_fonts";
+@import "scss/elements/_landingpage";
+@import "scss/_base";
+
+* {
+  box-sizing: border-box;
+  background-color: $color-orange-light;
+  color: $color-maroon;
+}
+.app {
+  border: 2px solid $color-green;
+  border-radius: 10px;
+  padding: 30px;
+  margin:100px 300px 0 300px;
+  font-family: $font-charmonman;
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  p {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+}
