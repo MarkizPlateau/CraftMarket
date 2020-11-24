@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './App.scss';
+import Header from "./js/Header";
+import Logo from "./js/Logo";
 
 function App() {
   return (
-    <div className="app">
-      <h1> Welcome in HandiCraftin' Дело</h1>
-        <p>There will be some components</p>
-    </div>
+      <>
+          <Header/>
+          <div className="app">
+              <h1> Welcome in HandiCraftin' Дело</h1>
+              <p>There will be some components</p>
+              <br/>
+              <Logo/>
+          </div>
+      </>
   );
 }
 
