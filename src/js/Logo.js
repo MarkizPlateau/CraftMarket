@@ -2,7 +2,7 @@ import React from "react";
 
 const Logo = () => {
     return (
-        <h1>Here there will be logo</h1>
+        <h1 className={"logo"}> <i className="fas fa-palette logo-palette"></i> HandiCraftin Market</h1>
     )
 }
 

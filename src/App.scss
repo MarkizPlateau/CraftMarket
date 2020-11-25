@@ -2,24 +2,27 @@
 @import "scss/_colors";
 @import "scss/_fonts";
 @import "scss/elements/_landingpage";
+@import "scss/elements/_header";
+@import "scss/elements/_login";
 @import "scss/_base";
 
-* {
-  box-sizing: border-box;
-  background-color: $color-orange-light;
-  color: $color-maroon;
-}
+
 .app {
+  max-width: 800px;
+  background-color: $color-orange;
   border: 2px solid $color-green;
   border-radius: 10px;
   padding: 30px;
-  margin:100px 300px 0 300px;
-  font-family: $font-charmonman;
+  margin:100px auto 0 auto;
+  font-family: $font-open-sans;
   text-align: center;
   font-weight: 400;
   font-size: 40px;
-  p {
-    margin-top: 20px;
-    font-size: 30px;
+  .login-title {
+    background-color: $color-orange;
+    span {
+      font-family: $font-kaushan;
+      background-color: $color-orange;
+    }
   }
 }
