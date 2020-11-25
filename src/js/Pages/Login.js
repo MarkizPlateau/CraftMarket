@@ -7,6 +7,7 @@ const Login = () => {
                 <form className={"login-form"}>
                     <input type="text" id="login-name" name="name" placeholder={"Your name or email"}/>
                     <input type="password" id="login-password" name="password" placeholder={"Password"}/>
+                    <button type={"submit"} className={"login-submit"}>Submit</button>
                 </form>
         </section>
     )

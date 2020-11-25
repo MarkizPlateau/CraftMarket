@@ -17,5 +17,14 @@
       border: 2px solid $color-green;
       border-radius: 10px;
     }
+    .login-submit {
+      max-width: 200px;
+      padding: 0 20px;
+      margin: 0 auto;
+      border: 2px solid $color-green;
+      border-radius: 10px;
+      background-color: $color-green;
+      color: $color-orange-light;
+    }
   }
 }
