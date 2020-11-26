@@ -1,19 +1,30 @@
+import React from "react";
 import logo from './logo.svg';
 import './App.scss';
 import Header from "./js/Header";
 import Login from "./js/Pages/Login";
+import NotFound from "./js/Pages/NotFound";
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
+
+
+
 function App() {
-
-
   return (
-      <>
-          <Header/>
-          <div className="app">
-              <h1 className={"login-title"}> Welcome in <span>HandiCraftin Market</span></h1>
-              <br/>
-              <Login/>
-          </div>
-      </>
+      <HashRouter>
+          <Switch>
+          <Route exact path='/header' component={Header} />
+          <Route exact path='/login' component={Login}/>
+          <Route component={NotFound} />
+          <Login/>
+          <NotFound/>
+          </Switch>
+      </HashRouter>
   );
 }
 
