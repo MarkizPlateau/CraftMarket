@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Swietłana",
+      "userLogin": "???",
+      "userPassword": "????",
+      "items": {
+        "clothing": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "jewelry": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "paintings": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "sculptures": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ]
+      }
+    }
+  ]
+}
