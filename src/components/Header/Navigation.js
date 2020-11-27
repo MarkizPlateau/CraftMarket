@@ -1,17 +1,13 @@
 import React from "react";
-import Main from "../Main/Main";
-import Favourite from "../Favourite/Favourite";
-import New from "../New/New";
-import Logout from "../Logout/Logout";
 
 
 const Navigation = () => {
     return (
         <ul className={"menu"}>
-            <Main />
-            <Favourite />
-            <New />
-            <Logout />
+            <li className={"menu-item"}> Your market place </li>
+            <li className={"menu-item"}> Favourite</li>
+            <li className={"menu-item"}> Add new </li>
+            <li className={"menu-item"}> Log out </li>
         </ul>
     )
 }

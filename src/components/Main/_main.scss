@@ -1,0 +1,10 @@
+.main-container {
+  font-size: 3rem;
+  .main-title {
+    margin-top: 20px;
+    text-align: center;
+    span {
+      font-family: $font-kaushan;
+    }
+  }
+}

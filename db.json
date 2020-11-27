@@ -43,6 +43,50 @@
           }
         ]
       }
+    },
+    {
+      "id": 2,
+      "userName": "Chloé",
+      "userLogin": "???",
+      "userPassword": "????",
+      "items": {
+        "clothing": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "jewelry": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "paintings": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ],
+        "sculptures": [
+          {
+            "itemID": "",
+            "itemName": "",
+            "itemPhotos": "",
+            "itemDescription": "",
+            "itemCategory": ""
+          }
+        ]
+      }
     }
   ]
 }
