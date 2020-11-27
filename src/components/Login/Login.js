@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../Header";
-import {Switch} from "react-router-dom";
+import Header from "../Header/Header";
+import {Link, Switch} from "react-router-dom";
 const Login = () => {
     return (
         <section className={"login-container"}>
@@ -12,7 +12,7 @@ const Login = () => {
                 <form className={"login-form"}>
                     <input type="text" id="login-name" name="name" placeholder={"Your name or email"}/>
                     <input type="password" id="login-password" name="password" placeholder={"Password"}/>
-                    <button type={"submit"} className={"login-submit"}>Submit</button>
+                    <Link to={"/header"}><button type={"submit"} className={"login-submit"}>Submit</button></Link>
                 </form>
             </div>
         </section>

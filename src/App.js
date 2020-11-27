@@ -1,9 +1,9 @@
 import React from "react";
 import logo from './logo.svg';
 import './App.scss';
-import Header from "./js/Header";
-import Login from "./js/Pages/Login";
-import NotFound from "./js/Pages/NotFound";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import NotFound from "./components/NotFound/NotFound";
 import {
     HashRouter,
     Route,
@@ -19,7 +19,7 @@ function App() {
       <HashRouter>
           <Switch>
           <Route exact path='/header' component={Header} />
-          <Route exact path='/login' component={Login}/>
+          <Route exact path='/' component={Login}/>
           <Route component={NotFound} />
           <Login/>
           <NotFound/>

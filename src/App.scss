@@ -1,10 +1,9 @@
 @import "scss/_reset";
 @import "scss/_colors";
 @import "scss/_fonts";
-@import "scss/elements/_landingpage";
-@import "scss/elements/_notfound";
-@import "scss/elements/_header";
-@import "scss/elements/_login";
+@import "components/NotFound/notfound";
+@import "components/Header/header";
+@import "components/Login/login";
 @import "scss/_base";
 
 

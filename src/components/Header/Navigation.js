@@ -1,8 +1,8 @@
 import React from "react";
-import Main from "./Pages/Main";
-import Favourite from "./Pages/Favourite";
-import New from "./Pages/New";
-import Logout from "./Pages/Logout";
+import Main from "../Main/Main";
+import Favourite from "../Favourite/Favourite";
+import New from "../New/New";
+import Logout from "../Logout/Logout";
 
 
 const Navigation = () => {
