@@ -5,15 +5,28 @@ import { AuthUserContext } from '../Session';
 
 import * as ROUTES from '../../constants/routes';
 
-const Navigation = () => (
-    <div>
-        <AuthUserContext.Consumer>
-            {authUser =>
-                authUser ? <NavigationAuth /> : <NavigationNonAuth />
-            }
-        </AuthUserContext.Consumer>
-    </div>
-);
+const Navigation = () =>{
+    return (
+        <div>
+            <AuthUserContext.Consumer>
+                {
+                    (state) => {
+                        // if (state.loading) {
+                        //     // show loader
+                        // }
+                        if (state.authUser && state.user && state.user.isAdmin) {
+                            return <NaviagtionAdmin />
+                        } else if(state.authUser) {
+                            return <NavigationAuth />
+                        } else {
+                            return <NavigationNonAuth/>
+                        }
+                    }
+                }
+            </AuthUserContext.Consumer>
+        </div>
+    );
+}
 
 const NavigationAuth = () => (
     <ul>

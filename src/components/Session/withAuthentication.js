@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AuthUserContext from './context';
-import { withFirebase } from '../Firebase';
+import Firebase, { withFirebase } from '../Firebase';
 
 const withAuthentication = Component => {
     class WithAuthentication extends React.Component {
@@ -10,15 +10,45 @@ const withAuthentication = Component => {
 
             this.state = {
                 authUser: null,
+                user:null,
+                // loading: true,
             };
         }
 
         componentDidMount() {
             this.listener = this.props.firebase.auth.onAuthStateChanged(
                 authUser => {
-                    authUser
-                        ? this.setState({ authUser })
-                        : this.setState({ authUser: null });
+                    let thisRefrence = this;
+
+                    if (authUser) {
+
+                        this.props.firebase.users().on('value', snapshot => {
+                            const usersObject = snapshot.val();
+
+                            const usersList = Object.keys(usersObject).map(key => ({
+                                ...usersObject[key],
+                                uid: key,
+                            }));
+
+                            usersList.forEach(function(user) {
+                                if (user.uid == authUser.uid) {
+                                    thisRefrence.setState({
+                                        user:user,
+                                        authUser:authUser,
+                                        // loading:false
+                                    });
+                                }
+
+                                return null;
+                            });
+                        });
+
+                    } else {
+                        this.setState({
+                            authUser: null,
+                            user: null,
+                        });
+                    }
                 },
             );
         }
@@ -29,8 +59,8 @@ const withAuthentication = Component => {
 
         render() {
             return (
-                <AuthUserContext.Provider value={this.state.authUser}>
-                    <Component {...this.props} />
+                <AuthUserContext.Provider value={this.state}>
+                    <Component {...this.props} props={this.state}/>
                 </AuthUserContext.Provider>
             );
         }
