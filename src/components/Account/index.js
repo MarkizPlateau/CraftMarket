@@ -6,13 +6,20 @@ import PasswordChangeForm from '../PasswordChange';
 
 const AccountPage = () => (
     <AuthUserContext.Consumer>
-        {authUser => (
-            <div>
-                <h1>Account: {authUser.email}</h1>
-                <PasswordForgetForm />
-                <PasswordChangeForm />
-            </div>
-        )}
+        {
+            (state) => {
+                if (state.authUser) {
+                    return (
+                        <div>
+                            <h1> Account: {state.authUser.email} </h1>
+                            <PasswordForgetForm />
+                            <PasswordChangeForm />
+                        </div>
+                    )
+                }
+            }
+
+        }
     </AuthUserContext.Consumer>
 );
 

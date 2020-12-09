@@ -1,14 +1,48 @@
-import React from "react";
+import React from 'react';
+import { withAuthentication } from '../Session';
 
-import { withAuthorization } from '../Session';
+const Home = ({props}) => {
+    let username = ""
 
-const HomePage = () => (
-    <div>
-        <h1>Home Page</h1>
-        <p>The Home Page is accessible by every signed in user.</p>
-    </div>
-);
+    if (props && props.user) {
+        username = props.user.username
+    }
 
-const condition = authUser => !!authUser;
+    return (
+        <>
+            <h1> Hey {username}</h1>
+        </>
+    )
+};
 
-export default withAuthorization(condition)(HomePage);
+// {({theme, toggleTheme}) => (
+//     <button
+//         onClick={toggleTheme}
+//         style={{backgroundColor: theme.background}}>
+//         Przełącz motyw
+//
+export default withAuthentication(Home);
+
+
+// import React from 'react';
+// import { withAuthentication } from '../Session';
+//
+// const Home = ({props}) => {
+//     console.log("props:", props.user)
+//
+//     return (
+//         <>
+//             <h1> Hey </h1>
+//         </>
+//     )
+// };
+//
+// // {({theme, toggleTheme}) => (
+// //     <button
+// //         onClick={toggleTheme}
+// //         style={{backgroundColor: theme.background}}>
+// //         Przełącz motyw
+// //
+// export default withAuthentication(Home);
+
+
