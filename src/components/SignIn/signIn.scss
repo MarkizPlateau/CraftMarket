@@ -1,0 +1,70 @@
+@import "scss/_mixins";
+
+
+.signin_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .signin_text {
+    font-size: 1.5rem;
+  }
+
+  .signin_form {
+    display: flex;
+    flex-direction: column;
+
+    .signin_input_email {
+      margin: 20px;
+      font-size: 2rem;
+      border: 2px solid $color-green;
+      border-radius: 10px;
+
+      &:hover {
+        color: $color-green;
+        background-color: $color-orange;
+      }
+    }
+
+    .signin_input_password {
+      margin: 20px;
+      font-size: 2rem;
+      border: 2px solid $color-green;
+      border-radius: 10px;
+
+      &:hover {
+        color: $color-green;
+        background-color: $color-orange;
+      }
+    }
+
+    .signin_submit {
+      //font-size: 2rem;
+      //padding: 0 20px;
+      //margin: 0 auto;
+      //border: 2px solid $color-green;
+      //border-radius: 10px;
+      //background-color: $color-green;
+      //color: $color-orange;
+      @include mixin-button;
+    }
+  }
+
+  .signin_password_forget, .signin_singuplink {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    &:hover {
+      color: $color-green;
+      font-weight: 700;
+    }
+    a {
+      &:hover {
+        color: $color-green;
+        font-weight: 700;
+
+      }
+    }
+  }
+}

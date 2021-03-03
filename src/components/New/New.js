@@ -1,9 +1,11 @@
-import React from "react";
+// import React from "react";
+//
+// const New = () => {
+//     return (
+//         <li className={"menu-item"}> Add new </li>
+//     )
+// }
+//
+// export default New;
 
-const New = () => {
-    return (
-        <li className={"menu-item"}> Add new </li>
-    )
-}
 
-export default New;

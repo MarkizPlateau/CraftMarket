@@ -2,7 +2,10 @@ import React from "react";
 
 const LandingPage = () => {
     return (
-        <h2> Landing Page </h2>
+        <section className={"landingPage_section"}>
+            <h1 className={"logo"}> <i className={"fas fa-palette logo-palette"}></i> HandiCraftin Market</h1>
+            <p>Please Sign in</p>
+        </section>
     )
 }
 
