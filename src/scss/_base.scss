@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: $color-orange-light;
+  background-color: $color-background;
   color: $color-maroon;
 }
 
@@ -14,5 +14,6 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }

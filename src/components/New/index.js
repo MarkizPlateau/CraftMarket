@@ -12,21 +12,13 @@ const AddNew = () => {
     )
 }
 
-const INITIAL_STATE = {
-    itemName: "",
-    itemDescription: "",
-    itemPrice: ""
-
-    // items: [
-    //     {
-    //         itemID: '',
-    //         itemName: '',
-    //         itemPhoto: '',
-    //         itemDescription: '',
-    //         itemCategory: '',
-    //     }
-    // ]
-}
+    const INITIAL_STATE = {
+        itemName: "",
+        itemDescription: "",
+        itemPrice: "",
+        itemPicture: "",
+        userAdres: ""
+    }
 
 class AddNewFormBase extends Component {
     constructor(props) {
@@ -39,12 +31,14 @@ class AddNewFormBase extends Component {
 
         const uid = this.props.props.user.uid;
 
-        const {itemName, itemDescription, itemPrice} = this.state;
+        const {itemName, itemDescription, itemPrice, itemPicture, userAdres} = this.state;
 
         const itemData = {
             name: itemName,
             itemDescription: itemDescription,
             itemPrice: itemPrice + "zł",
+            itemPicture: itemPicture,
+            userAdres: userAdres,
         }
         const newItemKey = this.props.firebase.db.ref('users/' + uid).child('items').push().key;
         const updateItems = {};
@@ -67,13 +61,18 @@ class AddNewFormBase extends Component {
             itemName,
             itemDescription,
             itemPrice,
+            itemPicture,
+            userAdres,
             error,
         } = this.state;
 
         const isInvalid =
             itemName === '' ||
             itemDescription === '' ||
-            itemPrice === '';
+            itemPrice === '' ||
+            itemPicture === '' ||
+            userAdres === ''
+        ;
 
         return (
             <form onSubmit={this.onSubmit}>
@@ -91,6 +90,13 @@ class AddNewFormBase extends Component {
                     type="textarea"
                     placeholder="Opisz rękodzieło"
                 />
+                <input
+                    name="itemPicture"
+                    value={itemPicture}
+                    onChange={this.onChange}
+                    type="text"
+                    placeholder="Prześlij adres do zdjęcia"
+                />
                 <PictureInput/>
                 <input
                     name="itemPrice"
@@ -99,6 +105,13 @@ class AddNewFormBase extends Component {
                     type="number"
                     placeholder="Podaj cenę"
                 /><p>zł</p>
+                <input
+                    name="userAdres"
+                    value={userAdres}
+                    onChange={this.onChange}
+                    type="text"
+                    placeholder="Podaj email do kontaktu"
+                />
                 <button disabled={isInvalid} type="submit">
                     Prześlij swoją sztukę!
                 </button>
@@ -126,7 +139,7 @@ class PictureInput extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Prześlij zdjęcie:
+                    Prześlij zdjęcie zdjęcie z dysku:
                     <input type="file" ref={this.fileInput} />
                 </label>
                 <br />

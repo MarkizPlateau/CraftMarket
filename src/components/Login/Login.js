@@ -26,8 +26,6 @@ const Login = () => {
             console.log(`Witaj: ${users[0].userName}`);
             setLoged(prev => users[0].userName)
 
-        } else {
-            console.log("Gówno jebane")
         }
     }
 

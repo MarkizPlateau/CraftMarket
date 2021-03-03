@@ -7,7 +7,8 @@ import * as ROUTES from '../../constants/routes';
 
 const Navigation = () =>{
     return (
-        <div>
+        <header className={"header"}>
+            <h1 className={"logo"}> <i className={"fas fa-palette logo-palette"}></i> HandiCraftin Market</h1>
             <AuthUserContext.Consumer>
                 {
                     (state) => {
@@ -15,7 +16,7 @@ const Navigation = () =>{
                         //     // show loader
                         // }
                         if (state.authUser && state.user && state.user.isAdmin) {
-                            return <NaviagtionAdmin />
+                            return <NaviagtionAdmin  />
                         } else if(state.authUser) {
                             return <NavigationAuth />
                         } else {
@@ -24,59 +25,59 @@ const Navigation = () =>{
                     }
                 }
             </AuthUserContext.Consumer>
-        </div>
+        </header>
     );
 }
 
 const NavigationAuth = () => (
-    <ul>
-        <li>
+    <ul className={"navigation"}>
+        <li className={"menu-item"}>
             <Link to={ROUTES.HOME}>Home</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.FAVORITES}>Favorites</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.ADD_NEW}>Add new</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.ACCOUNT}>Account</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <SignOutButton />
         </li>
     </ul>
 );
 
 const NaviagtionAdmin = () => (
-    <ul>
-        <li>
+    <ul className={"navigation"}>
+        <li className={"menu-item"}>
             <Link to={ROUTES.HOME}>Home</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.FAVORITES}>Favorites</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.ADD_NEW}>Add new</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.ACCOUNT}>Account</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.ADMIN}>Admin</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <SignOutButton />
         </li>
     </ul>
 );
 
 const NavigationNonAuth = () => (
-    <ul>
-        <li>
+    <ul className={"navigation"}>
+        <li className={"menu-item"}>
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
-        <li>
+        <li className={"menu-item"}>
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
         </li>
     </ul>

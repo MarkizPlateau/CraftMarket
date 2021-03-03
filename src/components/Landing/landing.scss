@@ -1,0 +1,21 @@
+.landingPage_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+
+  .logo {
+    font-family: $font-kaushan;
+    font-size: 3rem;
+
+    .logo-palette {
+      color: $color-green;
+    }
+  }
+  p {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+}
+

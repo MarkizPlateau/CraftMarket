@@ -1,29 +1,31 @@
 @import "scss/_reset";
 @import "scss/_colors";
 @import "scss/_fonts";
-@import "components/NotFound/notfound";
-@import "components/Header/header";
-@import "components/Login/login";
-@import "components/Main/main";
 @import "scss/_base";
+@import "./components/Landing/landing";
+@import "./components/Navigation/header";
+@import "./components/SignIn/signIn";
+@import "./components/Home/home";
 
 
-.app {
-  max-width: 800px;
-  background-color: $color-orange;
-  border: 2px solid $color-green;
-  border-radius: 10px;
-  padding: 30px;
-  margin:100px auto 0 auto;
-  font-family: $font-open-sans;
-  text-align: center;
-  font-weight: 400;
-  font-size: 40px;
-  .login-title {
-    background-color: $color-orange;
-    span {
-      font-family: $font-kaushan;
-      background-color: $color-orange;
-    }
-  }
-}
+
+
+//.app {
+//  max-width: 800px;
+//  background-color: $color-orange;
+//  border: 2px solid $color-green;
+//  border-radius: 10px;
+//  padding: 30px;
+//  margin:100px auto 0 auto;
+//  font-family: $font-open-sans;
+//  text-align: center;
+//  font-weight: 400;
+//  font-size: 40px;
+//  .login-title {
+//    background-color: $color-orange;
+//    span {
+//      font-family: $font-kaushan;
+//      background-color: $color-orange;
+//    }
+//  }
+//}

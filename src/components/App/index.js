@@ -27,7 +27,7 @@ const App = () => (
             <div>
                 <Navigation />
 
-                <hr />
+                <hr className={"header_line"}/>
 
                 <Route exact path={ROUTES.LANDING} component={LandingPage} />
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
