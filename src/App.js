@@ -3,6 +3,7 @@ import './App.scss';
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import NotFound from "./components/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
 import {
     HashRouter,
     Route,
@@ -15,15 +16,17 @@ import {
 
 function App() {
   return (
-      <HashRouter>
-          <Switch>
-          <Route path='/main' component={Main} />
-          <Route exact path='/' component={Login}/>
-          <Route component={NotFound} />
-          <Login/>
-          <NotFound/>
-          </Switch>
-      </HashRouter>
+      <>
+          <HashRouter>
+              <Switch>
+                  <Route path='/main' component={Main} />
+                  <Route exact path='/' component={Login}/>
+                  {/*<Route path="*">*/}
+                  {/*    <NotFound/>*/}
+                  {/*</Route>*/}
+              </Switch>
+          </HashRouter>
+        </>
   );
 }
 

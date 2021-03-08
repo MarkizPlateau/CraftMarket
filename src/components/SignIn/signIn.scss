@@ -9,7 +9,7 @@
   margin-top: 50px;
 
   .signin_text {
-    font-size: 1.5rem;
+    @include mixin-heading;
   }
 
   .signin_form {
@@ -17,37 +17,14 @@
     flex-direction: column;
 
     .signin_input_email {
-      margin: 20px;
-      font-size: 2rem;
-      border: 2px solid $color-green;
-      border-radius: 10px;
-
-      &:hover {
-        color: $color-green;
-        background-color: $color-orange;
-      }
+      @include mixin-input;
     }
 
     .signin_input_password {
-      margin: 20px;
-      font-size: 2rem;
-      border: 2px solid $color-green;
-      border-radius: 10px;
-
-      &:hover {
-        color: $color-green;
-        background-color: $color-orange;
-      }
+      @include mixin-input;
     }
 
     .signin_submit {
-      //font-size: 2rem;
-      //padding: 0 20px;
-      //margin: 0 auto;
-      //border: 2px solid $color-green;
-      //border-radius: 10px;
-      //background-color: $color-green;
-      //color: $color-orange;
       @include mixin-button;
     }
   }

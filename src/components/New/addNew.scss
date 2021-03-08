@@ -1,0 +1,63 @@
+.add_new_container {
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 1300px;
+  text-align: center;
+
+  .add_new_heading {
+    margin-top: 50px;
+    @include mixin-heading;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 80%;
+
+    input {
+      @include mixin-input;
+      width: 350px;
+    }
+
+    .add_new_input_name {
+      display: block;
+      margin: 10px auto;
+    }
+
+    .add_new_input_description {
+      @include mixin-input;
+      height: 180px;
+      width: 70%;
+    }
+    .form_left_container{
+      margin: 0 auto;
+      width: 70%;
+      text-align: left;
+
+      input {
+        margin: 20px 0;
+      }
+      form {
+        margin: 0;
+        label {
+          font-size: 1.8rem;
+          margin: 0;
+        }
+      }
+      p {
+        margin-left: 10px;
+        font-size: 2rem;
+        font-family: $font-kaushan;
+        display: inline-block;
+        width: 40%;
+      }
+      button {
+        @include mixin-button;
+        margin-left: 10px;
+        font-size: 1.4rem;
+
+      }
+
+    }
+  }
+}
+

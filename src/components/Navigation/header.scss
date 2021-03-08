@@ -2,11 +2,13 @@
 
 
 .header {
-  margin: 10px 20px;
+  margin: 10px auto;
+  max-width: 1300px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
 
   .logo {
     font-family: $font-kaushan;
@@ -36,6 +38,11 @@
     .signout_button {
       @include mixin-button;
       font-size: 1.2rem;
+      a{
+        &:hover{
+          color: inherit;
+        }
+      }
     }
   }
 }

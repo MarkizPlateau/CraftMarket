@@ -1,5 +1,5 @@
 .home_section {
-  margin-top: 5%;
+  margin: 5% 0 2%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -13,6 +13,8 @@
     padding: 2rem;
     border: 2px solid $color-green;
     border-radius: 10px;
+    width: 452px;
+    max-height: 500px;
 
     .user_item_name {
       font-size: 2.5rem;
@@ -24,8 +26,15 @@
     }
 
     .user_item_description {
+      margin-bottom: 0;
+      text-align: center;
       font-size: 1.8rem;
+      min-height: 65px;
       margin: 10px 0;
+      overflow-y: auto;
+    }
+    .paddingDescription {
+      padding-top: 25px;
     }
 
     //.hover_description {
@@ -35,12 +44,13 @@
 
     .user_item_price {
       font-size: 2rem;
-      margin: 10px 0;
+      margin: 5px 0;
     }
 
     .user_adres {
       font-size: 2rem;
-      margin: 10px 0;
+      margin: 5px 0;
+      margin-bottom: 10px;
     }
   }
 }

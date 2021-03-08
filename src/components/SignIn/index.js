@@ -6,6 +6,7 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import WebsiteGraphic from "../WebsiteGraphic";
 
 const SignInPage = () => (
     <section className={"signin_section"}>
@@ -13,6 +14,7 @@ const SignInPage = () => (
         <SignInForm />
         <PasswordForgetLink />
         <SignUpLink />
+        <WebsiteGraphic/>
     </section>
 );
 

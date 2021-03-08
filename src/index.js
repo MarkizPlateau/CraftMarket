@@ -4,11 +4,13 @@ import './App.scss';
 import App from "./components/App/index";
 import reportWebVitals from './reportWebVitals';
 import Firebase, { FirebaseContext } from './components/Firebase';
+import Footer from "./components/Footer/Footer";
 
 
 ReactDOM.render(
     <FirebaseContext.Provider value={new Firebase()}>
         <App/>
+        <Footer/>
     </FirebaseContext.Provider>,
     document.getElementById('root'),
 );
