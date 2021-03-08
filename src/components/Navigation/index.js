@@ -7,6 +7,7 @@ import * as ROUTES from '../../constants/routes';
 
 const Navigation = () =>{
     return (
+
         <header className={"header"}>
             <h1 className={"logo"}> <i className={"fas fa-palette logo-palette"}></i> HandiCraftin Market</h1>
             <AuthUserContext.Consumer>
@@ -26,6 +27,7 @@ const Navigation = () =>{
                 }
             </AuthUserContext.Consumer>
         </header>
+
     );
 }
 

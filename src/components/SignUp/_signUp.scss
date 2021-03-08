@@ -1,0 +1,26 @@
+@import "scss/_mixins";
+
+
+.signup_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .signup-heading {
+    @include mixin-heading;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      @include mixin-input;
+      margin: 10px;
+    }
+    button {
+      @include mixin-button;
+    }
+  }
+}

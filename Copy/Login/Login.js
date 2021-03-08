@@ -27,7 +27,7 @@ const Login = () => {
             setLoged(prev => users[0].userName)
 
         } else {
-            console.log("Gówno jebane")
+            console.log("Hit")
         }
     }
 

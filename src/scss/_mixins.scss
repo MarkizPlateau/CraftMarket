@@ -7,3 +7,25 @@
   background-color: $color-green;
   color: $color-orange-light;
 }
+
+@mixin mixin-input {
+  border: 2px solid $color-green;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  margin: 20px;
+  padding: 5px 10px;
+  color: $color-green;
+  &:hover{
+    background-color: $color-orange;
+  }
+  &:focus{
+    background-color: $color-orange;
+  }
+}
+
+@mixin mixin-heading{
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-family: $font-kaushan;
+}
+

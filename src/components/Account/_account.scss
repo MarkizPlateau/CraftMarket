@@ -1,0 +1,29 @@
+.account_section {
+  margin: 0 auto;
+  max-width: 1300px;
+  text-align: center;
+  input {
+    @include mixin-input;
+    margin: 10px 20px;
+  }
+  button {
+    @include mixin-button;
+    margin: 10px 20px;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: 50px 0 30px;
+
+    span{
+      color:$color-green;
+    }
+  }
+  .account_forms_container {
+    width: 50%;
+    margin: 0 auto;
+    form {
+      text-align: left;
+    }
+  }
+}

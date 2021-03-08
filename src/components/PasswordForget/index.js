@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import WebsiteGraphic from "../WebsiteGraphic";
 
 const PasswordForgetPage = () => (
-    <div>
-        <h1>PasswordForget</h1>
+    <section className={"password_forget_section"}>
+        <h3 className={"title-password-forget"}>Forget your password ?</h3>
         <PasswordForgetForm />
-    </div>
+        <WebsiteGraphic/>
+    </section>
 );
 
 const INITIAL_STATE = {

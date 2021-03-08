@@ -4,12 +4,14 @@ import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import WebsiteGraphic from "../WebsiteGraphic";
 
 const SignUpPage = () => (
-    <div>
-        <h1>SignUp</h1>
+    <section className={"signup_section"}>
+        <h3 className={"signup-heading"}>Sign Up </h3>
         <SignUpForm />
-    </div>
+        <WebsiteGraphic/>
+    </section>
 );
 
 const INITIAL_STATE = {
@@ -115,7 +117,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
     <p className={"signin_singuplink"}>
-        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+        <Link to={ROUTES.SIGN_UP}> Don't have an account? Sign Up</Link>
     </p>
 );
 

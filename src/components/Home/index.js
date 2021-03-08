@@ -52,7 +52,6 @@ class Home extends Component {
                 {/*<h1> Hey {username}</h1>*/}
 
                 {loading && <div>Loading ...</div>}
-
                 <UserItems usersItems={usersItems} />
             </>
         )
@@ -65,8 +64,7 @@ const UserItems = ({ usersItems }) => (
                 <article className={"user_item"} key={index}>
                     <h1 className={"user_item_name"}>{item.name}</h1>
                     <img className={"user_item_picture"} src={item.itemPicture} width={400} />
-                    <p className={"user_item_description"}>{item.itemDescription}{/*.slice(0,20)}{"..."}*/}</p>
-                    {/*<p className={"hover_description"}>look here for more</p>*/}
+                    <p className={`user_item_description ${item.itemDescription.length < 80 && "paddingDescription"}`}>{item.itemDescription}</p>
                     <p className={"user_item_price"}>{item.itemPrice}</p>
                     <p className={"user_adres"}>{item.userAdres}</p>
                 </article>

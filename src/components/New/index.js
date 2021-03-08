@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import {withAuthentication} from "../Session";
 
 import * as ROUTES from "../../constants/routes";
+import WebsiteGraphic from "../WebsiteGraphic";
 
 const AddNew = () => {
     return (
-        <>
-            <h1>Add new</h1>
+        <section className={"add_new_container"}>
+            <h3 className={"add_new_heading"}>Add new</h3>
             <AddNewForm />
-        </>
+            <WebsiteGraphic/>
+        </section>
     )
 }
 
@@ -77,47 +79,54 @@ class AddNewFormBase extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <input
+                    className={"add_new_input_name"}
                     name="itemName"
                     value={itemName}
                     onChange={this.onChange}
                     type="text"
                     placeholder="Podaj nazwę rękodzieła"
                 />
-                <input
+                <textarea
+                    className={"add_new_input_description"}
                     name="itemDescription"
+                    wrap={"hard"}
                     value={itemDescription}
                     onChange={this.onChange}
-                    type="textarea"
                     placeholder="Opisz rękodzieło"
                 />
-                <input
-                    name="itemPicture"
-                    value={itemPicture}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Prześlij adres do zdjęcia"
-                />
-                <PictureInput/>
-                <input
-                    name="itemPrice"
-                    value={itemPrice}
-                    onChange={this.onChange}
-                    type="number"
-                    placeholder="Podaj cenę"
-                /><p>zł</p>
-                <input
-                    name="userAdres"
-                    value={userAdres}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Podaj email do kontaktu"
-                />
-                <button disabled={isInvalid} type="submit">
-                    Prześlij swoją sztukę!
-                </button>
+                <div className={"form_left_container"}>
+                    <input
+                        name="itemPicture"
+                        value={itemPicture}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Prześlij adres www do zdjęcia"
+                    />
+                    <PictureInput/>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                    <input
+                        name="itemPrice"
+                        value={itemPrice}
+                        onChange={this.onChange}
+                        type="number"
+                        placeholder="Podaj cenę"
+                    /><p>zł</p>
+
+
+                    <input
+                        name="userAdres"
+                        value={userAdres}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Podaj email do kontaktu"
+                    />
+                    <button disabled={isInvalid} type="submit">
+                        Prześlij swoją sztukę!
+                    </button>
+
+                    {error && <p>{error.message}</p>}
+                </div>
+                </form>
         )
     }
 }
@@ -140,9 +149,9 @@ class PictureInput extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Prześlij zdjęcie zdjęcie z dysku:
+                    <br/>
                     <input type="file" ref={this.fileInput} />
                 </label>
-                <br />
                 <button type="submit">Wyślij</button>
             </form>
         );
