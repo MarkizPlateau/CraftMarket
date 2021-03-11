@@ -150,7 +150,7 @@ class PictureInput extends React.Component {
                 <label>
                     Prześlij zdjęcie zdjęcie z dysku:
                     <br/>
-                    <input type="file" ref={this.fileInput} />
+                    <input type="file" className={"input-file"} ref={this.fileInput} />
                 </label>
                 <button type="submit">Wyślij</button>
             </form>
